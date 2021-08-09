@@ -9,19 +9,21 @@
     <link rel="stylesheet" type="text/css" href="{{asset("customer/create.css")}}">
     <script type="text/javascript">
         function validate(){
-            var name = document.getElementById("fullName");
-            var phone = document.getElementById("phoneNumber");
-            var email = document.getElementById("email");
-           const checkPhone = /^[0-9]{9,12}$/;
+            var name = document.getElementById("fullName").value;
+            var phone = document.getElementById("phoneNumber").value;
+            var email = document.getElementById("email").value;
+            const checkName = /^[a-z A-Z]{5,100}$/;
+           const checkPhone = /^[0-9]{9,11}$/;
             const checkEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             var flag = 1;
-            if(name == "" || name.length <= 0){
+
+            if(name == "" || name.length <= 0 || checkName.test(name)==false){
                 flag =0;
             }
-            if(email.length <=0){
+            if(checkPhone.test(phone) == false){
                 flag=0;
             }
-            if(phone.length <=0){
+            if(checkEmail.test(email) == false){
                 flag=0;
             }
             if(flag == 1){
@@ -70,7 +72,7 @@
                         <td><input type="text" name="phoneNumber" id="phoneNumber"></td>
                     </tr>
                     <tr>
-                        <td>email</td>
+                        <td>Email</td>
                         <td><input type="text" name="email" id="email"></td>
                     </tr>
                 </table>
