@@ -1,0 +1,28 @@
+#container{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: lightgrey;
+}
+
+table, tr, td, th{
+    border: 1px solid black;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    height: 170px;
+}
+
+td{
+    max-height: 100%;
+    text-align: center;
+}
+
+.image{
+    max-height: 170px;
+    max-width: 170px;
+}
