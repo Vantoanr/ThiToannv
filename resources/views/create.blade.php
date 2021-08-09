@@ -13,7 +13,7 @@
             var phone = document.getElementById("phoneNumber").value;
             var email = document.getElementById("email").value;
             const checkName = /^[a-z A-Z]{5,100}$/;
-           const checkPhone = /^[0-9]{9,11}$/;
+           const checkPhone = /^[0-9]{9,12}$/;
             const checkEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             var flag = 1;
 
@@ -48,12 +48,12 @@
             @csrf
             <div id=" "image>
                 <table>
-                    <tr>
-                        <td>
+                    <tr id="anh">
+                        <td style="width: 30%; height: 100%; text-align: center">
                             <input type="file" style="display: none" id="file" onchange=" myfunc() " name="avatar">
-                            <div><label for="file">Chọn ảnh</label></div>
+                            <label style="text-align: center;"  for="file"><div style="width: 60%; height: 60%; text-align: center; font-size: 50px">Chọn ảnh</div></label>
                         </td>
-                        <td><img style="max-width: 200px; max-height: 200px" src="" id = "anh1" alt=""></td>
+                        <td style="width: 70%; text-align: center"><img style="max-width: 200px; max-height: 200px" src="" id = "anh1" alt=""></td>
                     </tr>
                 </table>
             </div>
@@ -77,7 +77,7 @@
                     </tr>
                 </table>
             </div>
-            <div style="text-align: center">
+            <div style="text-align: center; margin-top: 50px">
                 <button style="width: 100px; height: 50px; text-align: center; display: inline-block; margin: auto" type="submit">Thêm</button>
             </div>
 
