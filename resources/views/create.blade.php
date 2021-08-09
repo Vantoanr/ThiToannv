@@ -32,6 +32,12 @@
                 return false;
             }
         }
+        function myfunc(){
+            var a= document.getElementById('anh1');
+            var b= document.getElementById('file');
+            var url = URL.createObjectURL(b.files[0]);
+            a.src=url;
+        }
     </script>
 </head>
 <body>
@@ -42,10 +48,10 @@
                 <table>
                     <tr>
                         <td>
-                            <input type="file" style="display: none" id="file" name="avatar">
+                            <input type="file" style="display: none" id="file" onchange=" myfunc() " name="avatar">
                             <div><label for="file">Chọn ảnh</label></div>
                         </td>
-                        <td><img src="{{url("storage/Customer/")}}" alt=""></td>
+                        <td><img style="max-width: 200px; max-height: 200px" src="" id = "anh1" alt=""></td>
                     </tr>
                 </table>
             </div>
@@ -69,8 +75,8 @@
                     </tr>
                 </table>
             </div>
-            <div>
-                <button type="submit">Thêm</button>
+            <div style="text-align: center">
+                <button style="width: 100px; height: 50px; text-align: center; display: inline-block; margin: auto" type="submit">Thêm</button>
             </div>
 
         </form>
