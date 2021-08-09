@@ -80,6 +80,9 @@
             <div style="text-align: center; margin-top: 50px">
                 <button style="width: 100px; height: 50px; text-align: center; display: inline-block; margin: auto" type="submit">Thêm</button>
             </div>
+            <div>
+                <a href="{{url("/customers")}}">Quay lại trang chủ</a>
+            </div>
 
         </form>
     </div>
